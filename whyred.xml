@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features>
+
+<!--whether the device support hall sensor-->
+    <bool name="support_hall_sensor">true</bool>
+<!--support front flash or not-->
+    <bool name="support_front_flash">true</bool>
+<!--whether round corner-->
+    <bool name="support_round_corner">true</bool>
+<bool name="support_freeform_reply">true</bool>
+    <!--wether support ime xiaoai voice input-->
+    <bool name="surpport_ime_xiaoai_voice">true</bool>
+   
+
     <!--whether the device is pad-->
     <bool name="is_pad">false</bool>
     <!--whether the device is xiaomi-->
@@ -33,7 +45,7 @@
     <!--whether the device supports stereo record-->
     <bool name="support_stereo_record">true</bool>
     <!--whether the device supports screenrecorder inner-sound recorder mode-->
-    <integer name="support_inner_record">0</integer>
+    <integer name="support_inner_record">1</integer>
     <!--whether the device supports screen paper mode-->
     <bool name="support_screen_paper_mode">true</bool>
     <!--whether the device supports button light-->
@@ -47,7 +59,7 @@
     <!--whether the device supports dolby-->
     <bool name="support_dolby">false</bool>
     <!--whether the device supports screen effect-->
-    <bool name="support_screen_effect">true</bool>
+    bool name="support_screen_effect">true</bool>
     <!--which screen effect options should be show-->
     <integer name="screen_effect_supported">7</integer>
     <!--whether the device supports wapi-->
@@ -71,7 +83,7 @@
     <!--whether the device supports eap sim-->
     <bool name="support_eap_sim">true</bool>
     <!--whether the device supports screen optimize-->
-    <bool name="support_screen_optimize">true</bool>
+    <bool name="support_screen_optimize">false</bool>
     <!--whether the device supports agps-->
     <bool name="support_agps">true</bool>
     <!--whether the device supports feedback level-->
@@ -187,7 +199,7 @@
     <!--release time for the device, should be an unix timestamp-->
     <string name="release_time">1470758400000</string>
     <!--0:not support 1:close gamut 2:close ce-->
-    <integer name="screen_standard_mode">1</integer>
+    <integer name="screen_standard_mode">2</integer>
     <!--Flag of reduce preview size in camera(1:reduce, 0:do not reduce; 1st byte:rear camera, 2nd byte:front camera, 3rd byte:rear video, 4th byte:front video )-->
     <integer name="camera_reduce_preview_flag">14</integer>
     <!--max number of burst images one time -->
@@ -201,7 +213,7 @@
     <!-- front hht enhance-->
     <bool name="support_front_hht_enhance">true</bool>
     <!--max cpu freq of the device-->
-    <integer name="cpu_max_freq">220</integer>
+    <integer name="cpu_max_freq">200</integer>
     <!--total steps number of camera compensation-->
     <float name="camera_exposure_compensation_steps_num">12.0</float>
     <!--Left margin of count down parent layout for front camera-->
@@ -213,6 +225,8 @@
     <bool name="fingerprint_wakeup_device">true</bool>
     <!-- fingerprint navigation event name list -->
     <string-array name="fp_nav_event_name_list">
+    <item>fpc_irq_wakeup</item>
+        <item>fp-keys</item>
         <item>uinput-fpc</item>
         <item>uinput-goodix</item>
     </string-array>
@@ -282,7 +296,7 @@
     <bool name="enable_flash_global">true</bool>
     <bool name="support_new_silentmode">true</bool>
     <!--whether taking 18x9 ratio screen in camera-->
-    <bool name="is_18x9_ratio_screen">false</bool>
+    <bool name="is_18x9_ratio_screen">true</bool>
     <!--whether support portrait in camera-->
     <bool name="is_support_portrait">true</bool>
     <!--whether camera support screen light-->
@@ -333,13 +347,11 @@
     <!--whether sensor_has_latency-->
     <bool name="sensor_has_latency">true</bool>
     <!-- device head sar value -->
-    <float name="device_head_sar">0.962</float>
+    <float name="device_head_sar">1.188</float>
     <!-- device body sar value -->
-    <float name="device_body_sar">0.838</float>
+    <float name="device_body_sar">0.334</float>
     <!--The value of papar max level-->
-    <float name="paper_mode_max_level">255.0</float>
-    <!--The value of papar min level-->
-    <float name="paper_mode_min_level">58.0</float>
+  
     <!--whether paper mode and screen effect is compatible-->
     <bool name="is_compatible_paper_and_screen_effect">true</bool>
     <!--whether surpport paper mode animation-->
